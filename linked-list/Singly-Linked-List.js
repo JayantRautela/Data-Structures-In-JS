@@ -22,7 +22,7 @@ class SinglyLinkedList {
 	//function to create a Linked List.
 	append(data){
 		const newNode = new Node(data);
-		if (this.head != null){
+		if (this.head == null){
 			this.head = newNode;
 		} else {
 			let temp = this.head;
