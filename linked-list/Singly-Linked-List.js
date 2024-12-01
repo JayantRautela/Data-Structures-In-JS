@@ -44,7 +44,7 @@ class SinglyLinkedList {
 		const newNode= new Node(data);
 
 		if (index === 0){
-			newNode.next = head;
+			newNode.next = this.head;
 			this.head = newNode;
 		} else {
 			let cnt = 0;
