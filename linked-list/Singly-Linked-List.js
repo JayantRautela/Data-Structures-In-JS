@@ -38,7 +38,7 @@ class SinglyLinkedList {
 	insert(data, index){
 		if (index < 0 || index > this.length){
 			console.log("Invalid Index");
-			return,
+			return;
 		}
 
 		const newNode= new Node(data);
@@ -58,8 +58,8 @@ class SinglyLinkedList {
 			newNode.next = curr;
 			prev.next = newNode;
 		}
+		this.length++;
 	}
-	this.length++;
 
 	//funtion to remove a node from a linked list.
 	remove(index) {
@@ -88,13 +88,13 @@ class SinglyLinkedList {
 
 	//function to display the linked list
 	printList() {
-        	let temp = this.head;
-    		let listArr = [];
-    		while (temp) {
-      			listArr.push(temp.data);
-      			temp = temp.next;
-    		}
-    		console.log(listArr.join(" -> ")); //return the string
+        let temp = this.head;
+    	let listArr = [];
+    	while (temp) {
+      		listArr.push(temp.data);
+      		temp = temp.next;
+    	}
+    	console.log(listArr.join(" -> ")); //return the string
   	}
 }
 
